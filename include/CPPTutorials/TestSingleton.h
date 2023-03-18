@@ -1,9 +1,7 @@
 #ifndef TESTSINGLETON_H
 #define TESTSINGLETON_H
 
-#include <iostream>
-#include <memory>
-#include <string>
+#include "utils.h"
 
 /*
  * A singleton is a design pattern approach (a common solution to a common problem)
