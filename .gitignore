@@ -5,3 +5,4 @@
 *.autosave
 *.asv
 *build
+*.DS_Store
