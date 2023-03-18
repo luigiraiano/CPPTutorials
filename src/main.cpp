@@ -1,5 +1,6 @@
 #include <../include/CPPTutorials/TestSingleton.h>
 #include <../include/CPPTutorials/Box.h>
+#include "../include/CPPTutorials/utils.h"
 
 typedef union
 {
@@ -65,6 +66,10 @@ int main()
     uint32_t x_test=4278255360;
     uint32_t x_test_inv = invertEndianess(x_test);
     std::cout << "Endianess Inverted: " << x_test_inv << std::endl;
+
+    // Compute Box volume using the two methods
+    std::cout << "Volume of Box 3 (using internal implementation): " << b3.getVolume() << std::endl;
+    std::cout << "Volume of Box 3 (using external implemented function): " << b3.getVolume(&Utils::computeBoxVolume) << std::endl;
 
     return 0;
 }

@@ -1,6 +1,8 @@
 #ifndef BOX_H
 #define BOX_H
 
+#include "utils.h"
+
 class Box
 {
 public:
@@ -19,6 +21,8 @@ public:
 
 public:
     double getVolume(){volume = (x_ * y_ * z_); return volume;}
+    double getVolume(double (*volumeFunction)(const double&, const double&, const double&) );
+    double getVolume(const double& x, const double& y, const double& z, double (*volumeFunction)(const double&, const double&, const double&) );
 
     void setWidth(const double& val) {x_ = val;}
     void setLength(const double& val) {x_ = val;}

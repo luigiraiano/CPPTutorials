@@ -17,3 +17,13 @@ Box::Box(const double& x, const double& y, const double& z)
 
     uses_++;
 }
+
+double Box::getVolume(double (*volumeFunction)(const double&, const double&, const double&) )
+{
+    return (*volumeFunction)(x_,y_,z_);
+}
+
+double Box::getVolume(const double& x, const double& y, const double& z, double (*volumeFunction)(const double&, const double&, const double&) )
+{
+    return (*volumeFunction)(x,y,z);
+}
